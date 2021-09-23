@@ -6,7 +6,6 @@ from src.utils.sqlite import SqliteSDBC
 from src.crawler.cert360 import Cert360
 from src.crawler.nsfocus import NsFocus
 from src.crawler.qianxin import QiAnXin
-from src.crawler.redqueen import RedQueen
 from src.crawler.anquanke import AnQuanKe
 from src.crawler.vas import Vas
 
@@ -50,7 +49,7 @@ def main(
 
     else:
         all_cves = {}
-        srcs = [Cert360(), NsFocus(), QiAnXin(), RedQueen(), AnQuanKe(), Vas()]
+        srcs = [Cert360(), NsFocus(), QiAnXin(), AnQuanKe(), Vas()]
         for src in srcs:
             cve_list = src.cves()
             if cve_list:
