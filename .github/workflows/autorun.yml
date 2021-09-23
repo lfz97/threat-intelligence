@@ -35,7 +35,7 @@ jobs:
       uses: lyy289065406/action-send-mail@v3
       with:
         server_address: ${{ secrets.MAIL_SMTP }}
-        server_port: 465
+        server_port: 25
         username: ${{ secrets.MAIL_USER }}
         password: ${{ secrets.MAIL_PASS }}
         from: ${{ secrets.MAIL_USER }}
