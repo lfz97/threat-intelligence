@@ -23,7 +23,7 @@ class QiAnXin(BaseCrawler):
             for item in json_data["data"]["data"]:
                 cve = CVEInfo()
                 cve.id = item["cve_code"]
-                cve.src = "qianxin_ti"
+                cve.src = self.name_ch
                 cve.url = f"https://ti.qianxin.com/vul/{item['id']}"
                 cve.time = item["publish_time"]
                 cve.title = item["vuln_name"]
