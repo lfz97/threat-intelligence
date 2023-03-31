@@ -5,6 +5,7 @@ from lxml import etree
 from datetime import datetime
 
 from src.crawler.base import BaseCrawler
+from src.utils import log
 
 
 class Tenable(BaseCrawler):
@@ -25,7 +26,7 @@ class Tenable(BaseCrawler):
         return self.home_page
 
     def get_cves(self, limit=10):
-        response = httpx.get(self.url, headers=self.headers(), timeout=self.timeout)
+        response = httpx.get(self.url, headers=self.headers, timeout=self.timeout)
 
         cves = []
         if response.status_code == 200:

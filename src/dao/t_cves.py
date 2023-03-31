@@ -1,12 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Author : EXP
-# @Time   : 2020/4/29 23:32
-# @File   : t_cves.py
-# -----------------------------------------------
-# DAO: t_cves
-# -----------------------------------------------
-
 from src.bean.t_cves import TCves
 from src.dao._base import BaseDao
 

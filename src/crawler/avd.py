@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 class AVDCrawler(BaseCrawler):
     name_ch = "阿里云漏洞库"
-    name_en = "aliyun-avd"
+    name_en = "AliyunAVD"
     home_page = "https://avd.aliyun.com/high-risk/list"
     url = "https://avd.aliyun.com/high-risk/list"
 
@@ -33,7 +33,7 @@ class AVDCrawler(BaseCrawler):
                 continue
             cve = CVEInfo()
             cve.id = tds[0].text.strip()
-            cve.src = urllib.parse.urljoin(self.url, tds[0].find("a").get("href"))
+            cve.src = self.name_ch
             cve.url = urllib.parse.urljoin(self.url, tds[0].find("a").get("href"))
             cve.time = tds[3].text.strip()
             cve.title = tds[1].text.strip()
