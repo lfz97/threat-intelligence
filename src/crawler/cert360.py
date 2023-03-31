@@ -8,13 +8,11 @@ import time
 
 
 class Cert360(BaseCrawler):
-    def __init__(self):
-        super().__init__()
-        self.name_ch = "360"
-        self.name_en = "360"
-        self.home_page = "https://cert.360.cn/warning"
-        self.url_list = "https://cert.360.cn/warning/searchbypage"
-        self.url_cve = "https://cert.360.cn/warning/detail?id="
+    name_ch = "360"
+    name_en = "360"
+    home_page = "https://cert.360.cn/warning"
+    url_list = "https://cert.360.cn/warning/searchbypage"
+    url_cve = "https://cert.360.cn/warning/detail?id="
 
     def get_cves(self, limit=6):
         params = {"length": limit, "start": 0}

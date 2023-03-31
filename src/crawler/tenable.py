@@ -9,12 +9,10 @@ from src.utils import log
 
 
 class Tenable(BaseCrawler):
-    def __init__(self):
-        BaseCrawler.__init__(self)
-        self.name_ch = "Tenable (Nessus)"
-        self.name_en = "Tenable (Nessus)"
-        self.home_page = "https://www.tenable.com/"
-        self.url = "https://www.tenable.com/cve/feeds?sort=newest"
+    name_ch = "Tenable (Nessus)"
+    name_en = "Tenable (Nessus)"
+    home_page = "https://www.tenable.com/"
+    url = "https://www.tenable.com/cve/feeds?sort=newest"
 
     def NAME_CH(self):
         return self.name_ch
