@@ -2,7 +2,6 @@ from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
 import httpx
-import json
 import re
 
 
@@ -22,7 +21,7 @@ class RedQueen(BaseCrawler):
                 **self.headers,
                 "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
             },
-            data=data,
+            content=data,
             timeout=self.timeout,
         )
 
@@ -32,7 +31,6 @@ class RedQueen(BaseCrawler):
                 cve = self.to_cve(obj)
                 if cve.is_vaild():
                     cves.append(cve)
-                    # log.debug(cve)
         else:
             log.warn(
                 "获取 [%s] 威胁情报失败： [HTTP Error %i]" % (self.name_ch, response.status_code)
