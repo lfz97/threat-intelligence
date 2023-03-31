@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-03-31 14:16:56 -->
+<!-- RELEASE TIME : 2023-03-31 15:19:14 -->
 <html lang="zh-cn">
 
 <head>
@@ -220,6 +220,70 @@
             <th width="5%">URL</th>
         </tr>
         <tr>
+    <td>7a91dc2b7f1a70a72593ea239a235475</td>
+    <td>CVE-2023-1777</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>Mattermost allows an attacker to request a preview of an existing message when creating a new message via the createPost API call, disclosing the contents of the linked message.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1777">详情</a></td>
+</tr>
+
+<tr>
+    <td>e502424481da06ced33029577b7d2319</td>
+    <td>CVE-2023-1776</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>Boards in Mattermost allows an attacker to upload a malicious SVG image file as an attachment to a card and share it using a direct link to the file.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1776">详情</a></td>
+</tr>
+
+<tr>
+    <td>4c1d3913780761d1a134d486f537259a</td>
+    <td>CVE-2023-1775</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>When running in a High Availability configuration, Mattermost fails to sanitize some of the user_updated and post_deleted events broadcast to all users, leading to disclosure of sensitive information to some of the users with currently connected Websocket clients.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1775">详情</a></td>
+</tr>
+
+<tr>
+    <td>9bbfbeabf63fd49f679afc682ce04068</td>
+    <td>CVE-2023-1774</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>When processing an email invite to a private channel on a team, Mattermost fails to validate the inviter's permission to that channel, allowing an attacker to invite themselves to a private channel.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1774">详情</a></td>
+</tr>
+
+<tr>
+    <td>44b0834d696b42675cdfde702304da18</td>
+    <td>CVE-2023-1773</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>A vulnerability was found in Rockoa 2.3.2. It has been declared as critical. This vulnerability affects unknown code of the file webmainConfig.php of the component Configuration File Handler. The manipulation leads to code injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-224674 is the identifier assigned to this vulnerability.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1773">详情</a></td>
+</tr>
+
+<tr>
+    <td>c07aad90aac80761885ecd412947245b</td>
+    <td>CVE-2023-1772</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>A vulnerability was found in DataGear up to 4.5.1. It has been classified as problematic. This affects an unknown part of the component Diagram Type Handler. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-224673 was assigned to this vulnerability.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1772">详情</a></td>
+</tr>
+
+<tr>
+    <td>2192e6f02d6964089df0faebfe2cc804</td>
+    <td>CVE-2023-1771</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>A vulnerability was found in SourceCodester Grade Point Average GPA Calculator 1.0 and classified as problematic. Affected by this issue is the function get_scale of the file Master.php. The manipulation of the argument perc leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-224672.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1771">详情</a></td>
+</tr>
+
+<tr>
+    <td>ed4516a9651d3070bee4f8aebd5f3efa</td>
+    <td>CVE-2023-1770</td>
+    <td>2023-03-31 12:15:00</td>
+    <td>A vulnerability has been found in SourceCodester Grade Point Average GPA Calculator 1.0 and classified as critical. Affected by this vulnerability is the function get_scale of the file Master.php. The manipulation of the argument perc leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-224671.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1770">详情</a></td>
+</tr>
+
+<tr>
     <td>e975c83a9e6b62b56203031057c9bdc2</td>
     <td>CVE-2023-1769</td>
     <td>2023-03-31 11:15:00</td>
@@ -233,70 +297,6 @@
     <td>2023-03-31 10:15:00</td>
     <td>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in YKM YKM CRM allows Reflected XSS.This issue affects YKM CRM: before 23.03.30.</td>
     <td><a href="https://www.tenable.com/cve/CVE-2023-1060">详情</a></td>
-</tr>
-
-<tr>
-    <td>dbaee041a970d79a164b259182870e33</td>
-    <td>CVE-2023-1258</td>
-    <td>2023-03-31 08:15:00</td>
-    <td>Exposure of Sensitive Information to an Unauthorized Actor vulnerability in ABB Flow-X firmware on Flow-X embedded hardware (web service modules) allows Footprinting.This issue affects Flow-X: before 4.0.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1258">详情</a></td>
-</tr>
-
-<tr>
-    <td>243ff5e84bfecf8a3ca86d6e5c8d074e</td>
-    <td>CVE-2023-28727</td>
-    <td>2023-03-31 07:15:00</td>
-    <td>Panasonic AiSEG2 versions 2.00J through 2.93A allows adjacent attackers bypass authentication due to mishandling of X-Forwarded-For headers.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28727">详情</a></td>
-</tr>
-
-<tr>
-    <td>dda9facfe4d5021c6a41deadb1a5cbce</td>
-    <td>CVE-2023-28726</td>
-    <td>2023-03-31 07:15:00</td>
-    <td>Panasonic AiSEG2 versions 2.80F through 2.93A allows remote attackers to execute arbitrary OS commands.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28726">详情</a></td>
-</tr>
-
-<tr>
-    <td>adbbbbc0d5bf2262db581b65b3e1509c</td>
-    <td>CVE-2023-28756</td>
-    <td>2023-03-31 04:15:00</td>
-    <td>A ReDoS issue was discovered in the Time component through 0.2.1 in Ruby through 3.2.1. The Time parser mishandles invalid URLs that have specific characters. It causes an increase in execution time for parsing strings to Time objects. The fixed versions are 0.1.1 and 0.2.2.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28756">详情</a></td>
-</tr>
-
-<tr>
-    <td>7f459113e6671893cea6fd09a0a9fa84</td>
-    <td>CVE-2023-28755</td>
-    <td>2023-03-31 04:15:00</td>
-    <td>A ReDoS issue was discovered in the URI component through 0.12.0 in Ruby through 3.2.1. The URI parser mishandles invalid URLs that have specific characters. It causes an increase in execution time for parsing strings to URI objects. The fixed versions are 0.12.1, 0.11.1, 0.10.2 and 0.10.0.1.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28755">详情</a></td>
-</tr>
-
-<tr>
-    <td>adbbbbc0d5bf2262db581b65b3e1509c</td>
-    <td>CVE-2023-28756</td>
-    <td>2023-03-31 04:15:00</td>
-    <td>A ReDoS issue was discovered in the Time component through 0.2.1 in Ruby through 3.2.1. The Time parser mishandles invalid URLs that have specific characters. It causes an increase in execution time for parsing strings to Time objects. The fixed versions are 0.1.1 and 0.2.2.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28756">详情</a></td>
-</tr>
-
-<tr>
-    <td>7f459113e6671893cea6fd09a0a9fa84</td>
-    <td>CVE-2023-28755</td>
-    <td>2023-03-31 04:15:00</td>
-    <td>A ReDoS issue was discovered in the URI component through 0.12.0 in Ruby through 3.2.1. The URI parser mishandles invalid URLs that have specific characters. It causes an increase in execution time for parsing strings to URI objects. The fixed versions are 0.12.1, 0.11.1, 0.10.2 and 0.10.0.1.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28755">详情</a></td>
-</tr>
-
-<tr>
-    <td>f2511cf9894240669ab70ddc0fc70d79</td>
-    <td>CVE-2023-1762</td>
-    <td>2023-03-31 02:15:00</td>
-    <td>Improper Privilege Management in GitHub repository thorsten/phpmyfaq prior to 3.1.12.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1762">详情</a></td>
 </tr>
 
         </tbody>
