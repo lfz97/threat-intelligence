@@ -1,11 +1,12 @@
 import sys
 from src import config
-from src.crawler.tenable import Tenable
 from src.utils import log
 from src.utils.sqlite import SqliteSDBC
 
+from src.crawler.tenable import Tenable
+from src.crawler.oscs import OSCS
 from src.crawler.cert360 import Cert360
-from src.crawler.nsfocus import NsFocus
+# from src.crawler.nsfocus import NsFocus
 from src.crawler.qianxin import QiAnXin
 from src.crawler.redqueen import RedQueen
 from src.crawler.vas import Vas
@@ -53,11 +54,12 @@ def main(
         all_cves = {}
         srcs = [
             Cert360(),
-            NsFocus(),
+            # NsFocus(),
             QiAnXin(),
             RedQueen(),
             AVDCrawler(),
             Vas(),
+            OSCS(),
             Tenable(),
         ]
         for src in srcs:
