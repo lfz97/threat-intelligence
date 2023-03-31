@@ -1,7 +1,7 @@
 from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
-import requests
+import httpx
 import json
 import re
 
@@ -13,7 +13,7 @@ class QiAnXin(BaseCrawler):
     url = "https://ti.qianxin.com/advisory/"
 
     def get_cves(self):
-        response = requests.get(self.url, headers=self.headers, timeout=self.timeout)
+        response = httpx.get(self.url, headers=self.headers, timeout=self.timeout)
 
         cves = []
         if response.status_code == 200:

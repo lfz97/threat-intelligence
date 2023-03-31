@@ -28,7 +28,7 @@ def to_page(top_limit=10):
                 rows.append(row)
 
             table = table_tpl % {
-                "src": cves[0].src,
+                "src": cves[0].src if len(cves) else "",
                 "top": top_limit,
                 "rows": "\n".join(rows),
             }

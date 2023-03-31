@@ -1,7 +1,7 @@
 from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
-import requests
+import httpx
 import json
 import re
 import time
@@ -9,7 +9,7 @@ import time
 
 class Cert360(BaseCrawler):
     def __init__(self):
-        BaseCrawler.__init__(self)
+        super().__init__()
         self.name_ch = "360"
         self.name_en = "360"
         self.home_page = "https://cert.360.cn/warning"
@@ -19,7 +19,7 @@ class Cert360(BaseCrawler):
     def get_cves(self, limit=6):
         params = {"length": limit, "start": 0}
 
-        response = requests.get(
+        response = httpx.get(
             self.url_list, headers=self.headers, params=params, timeout=self.timeout
         )
 
@@ -53,3 +53,10 @@ class Cert360(BaseCrawler):
         rst = re.findall(r"(CVE-\d+-\d+)", title)
         cve.id = rst[0] if rst else ""
         return cve
+
+
+if __name__ == "__main__":
+    c = Cert360()
+    cves = c.get_cves()
+    for cve in cves:
+        print(cve)

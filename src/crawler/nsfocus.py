@@ -2,7 +2,7 @@ from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
 import time
-import requests
+import httpx
 import re
 
 
@@ -14,7 +14,7 @@ class NsFocus(BaseCrawler):
     url_cve = "http://www.nsfocus.net/vulndb/"
 
     def get_cves(self):
-        response = requests.get(
+        response = httpx.get(
             self.url_list, headers=self.headers, timeout=self.timeout
         )
 

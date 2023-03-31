@@ -32,7 +32,7 @@ Forked from [lyy289065406](https://github.com/lyy289065406/threat-broadcast/)
 <summary>播报效果</summary>
 <br/>
 
-![](https://github.com/Skactor/thread/blob/master/imgs/email.png)
+![](https://github.com/Skactor/threat-intelligence/blob/master/imgs/email.png)
 
 </details>
 
@@ -49,7 +49,7 @@ Forked from [lyy289065406](https://github.com/lyy289065406/threat-broadcast/)
 
 本项目已配置 [Github Actions](https://docs.github.com/cn/actions/configuring-and-managing-workflows/configuring-a-workflow)，因此你只需轻松几步即可实现部署：
 
-- [Fork 本项目](https://github.com/Skactor/thread) 到你的代码仓库
+- [Fork 本项目](https://github.com/Skactor/threat-intelligence) 到你的代码仓库
 - 通过 Settings --> Secrets 配置用于 **发送** 威胁情报邮件的 3 个环境变量：
 <br/>　　`MAIL_SMTP`： SMTP 服务器（国内推荐 QQ），如 `smtp.qq.com`
 <br/>　　`MAIL_USER`： 邮箱账号，如 `threatbroadcast@qq.com`
@@ -74,7 +74,7 @@ Forked from [lyy289065406](https://github.com/lyy289065406/threat-broadcast/)
 
 - 任意找一台 Linux 服务器（阿里云、腾讯云等）
 - 安装 python 2.7
-- 把仓库 checkout 到服务器本地： `git clone https://github.com/Skactor/thread`
+- 把仓库 checkout 到服务器本地： `git clone https://github.com/Skactor/threat-intelligence`
 
 > 国内的云主机（阿里云/腾讯云等）为了避免滥发邮件默认关闭了对 SMTP 25 端口的出口流量，直接导致邮件无法发送。 解封需要到控制台申请，例如 《[阿里云 25 端口解封](https://help.aliyun.com/knowledge_detail/56130.html?spm=a2c4e.11153940.0.0.50664791wrBD3D&source=5176.11533457&userCode=r3yteowb&type=copy)》、 《[腾讯云 25 端口解封](https://cloud.tencent.com/document/product/213/40436)》
 

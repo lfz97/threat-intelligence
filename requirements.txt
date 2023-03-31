@@ -1,3 +1,5 @@
-requests==2.24.0
-GitPython==3.1.7
-environs==8.0.0
+httpx[brotli]==0.23.3
+GitPython==3.1.31
+environs==9.5.0
+beautifulsoup4==4.11.2
+lxml==4.9.2

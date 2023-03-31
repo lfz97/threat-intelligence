@@ -144,3 +144,4 @@ log/*.log*
 
 recv/mail_*.dat
 cache/mail.dat
+idea/

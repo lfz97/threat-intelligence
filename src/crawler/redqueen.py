@@ -1,7 +1,7 @@
 from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
-import requests
+import httpx
 import json
 import re
 
@@ -16,7 +16,7 @@ class RedQueen(BaseCrawler):
     def get_cves(self, limit=10):
         data = 'query={ "page": 1, "page_count": %d }' % limit
 
-        response = requests.post(
+        response = httpx.post(
             self.url_list,
             headers={
                 **self.headers,

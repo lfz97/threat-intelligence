@@ -1,7 +1,7 @@
 from src.bean.cve_info import CVEInfo
 from src.crawler.base import BaseCrawler
 from src.utils import log
-import requests
+import httpx
 import json
 import re
 import time
@@ -15,7 +15,7 @@ class Vas(BaseCrawler):
     url_details = "https://console.riskivy.com/vas/"
     url_cve = "https://vas.riskivy.com/vuln-detail?id="
 
-    def get_cves(self, limit=5):
+    def get_cves(self):
         params = {
             "title": "",
             "cve": "",
@@ -26,21 +26,23 @@ class Vas(BaseCrawler):
             "has_repair": "",
             "bug_level": "",
             "page": 1,
-            "per-page": limit,
+            "per-page": 5,
         }
 
-        response = requests.get(
+        response = httpx.get(
             self.url_list, headers=self.headers, params=params, timeout=self.timeout
         )
 
         cves = []
         if response.status_code == 200:
             json_obj = json.loads(response.text)
-            for obj in json_obj.get("data").get("items"):
+            data = json_obj.get("data")
+            if not data:
+                return cves
+            for obj in data.get("items"):
                 cve = self.to_cve(obj)
                 if cve.is_vaild():
                     cves.append(cve)
-                    # log.debug(cve)
         else:
             log.warn(
                 "获取 [%s] 威胁情报失败： [HTTP Error %i]" % (self.name_ch, response.status_code)
@@ -64,7 +66,7 @@ class Vas(BaseCrawler):
 
     def get_cve_info(self, cve, id):
         url = self.url_details + id
-        response = requests.get(url, headers=self.headers, timeout=self.timeout)
+        response = httpx.get(url, headers=self.headers, timeout=self.timeout)
 
         if response.status_code == 200:
             json_obj = json.loads(response.text)
