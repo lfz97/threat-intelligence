@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-03-31 21:13:04 -->
+<!-- RELEASE TIME : 2023-03-31 23:16:43 -->
 <html lang="zh-cn">
 
 <head>
@@ -220,6 +220,54 @@
             <th width="5%">URL</th>
         </tr>
         <tr>
+    <td>e7ed87d114b5396b18720522254833d2</td>
+    <td>CVE-2023-27163</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>request-baskets up to v1.2.1 was discovered to contain a Server-Side Request Forgery (SSRF) via the component /api/baskets/{name}. This vulnerability allows attackers to access network resources and sensitive information via a crafted API request.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-27163">详情</a></td>
+</tr>
+
+<tr>
+    <td>f5c87d0ed0030a4b4338cb6d18f62649</td>
+    <td>CVE-2023-27162</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>openapi-generator up to v6.4.0 was discovered to contain a Server-Side Request Forgery (SSRF) via the component /api/gen/clients/{language}. This vulnerability allows attackers to access network resources and sensitive information via a crafted API request.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-27162">详情</a></td>
+</tr>
+
+<tr>
+    <td>7ef0ade01ceee2907fe2c1d4ae02e018</td>
+    <td>CVE-2023-26858</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>SQL injection vulnerability found in PrestaSHp faqs v.3.1.6 allows a remote attacker to escalate privileges via the faqsBudgetModuleFrontController::displayAjaxGenerateBudget component.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-26858">详情</a></td>
+</tr>
+
+<tr>
+    <td>592e3e63c33896cf802c78f31457f9d8</td>
+    <td>CVE-2023-1785</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>A vulnerability was found in SourceCodester Earnings and Expense Tracker App 1.0. It has been classified as critical. Affected is an unknown function of the file manage_user.php. The manipulation of the argument id leads to sql injection. It is possible to launch the attack remotely. The identifier of this vulnerability is VDB-224700.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1785">详情</a></td>
+</tr>
+
+<tr>
+    <td>91ffef8b036fd1b6e898778eb7bc7700</td>
+    <td>CVE-2023-1784</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>A vulnerability was found in jeecg-boot 3.5.0 and classified as critical. This issue affects some unknown processing of the component API Documentation. The manipulation leads to improper authentication. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-224699.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1784">详情</a></td>
+</tr>
+
+<tr>
+    <td>88d08b21c6ea57532b32cdd1a286a229</td>
+    <td>CVE-2022-4899</td>
+    <td>2023-03-31 20:15:00</td>
+    <td>A vulnerability was found in zstd v1.4.10, where an attacker can supply empty string as an argument to the command line tool to cause buffer overrun.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2022-4899">详情</a></td>
+</tr>
+
+<tr>
     <td>848579f26907f7c43b9ee2987a527949</td>
     <td>CVE-2023-29141</td>
     <td>2023-03-31 19:15:00</td>
@@ -249,54 +297,6 @@
     <td>2023-03-31 19:15:00</td>
     <td>An issue was discovered in the GrowthExperiments extension for MediaWiki through 1.39.3. The UserImpactHandler for GrowthExperiments inadvertently returns the timezone preference for arbitrary users, which can be used to de-anonymize users.</td>
     <td><a href="https://www.tenable.com/cve/CVE-2023-29137">详情</a></td>
-</tr>
-
-<tr>
-    <td>3d0c10875981e4b76660898f37999984</td>
-    <td>CVE-2023-27160</td>
-    <td>2023-03-31 19:15:00</td>
-    <td>forem up to v2022.11.11 was discovered to contain a Server-Side Request Forgery (SSRF) via the component /articles/{id}. This vulnerability allows attackers to access network resources and sensitive information via a crafted POST request.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-27160">详情</a></td>
-</tr>
-
-<tr>
-    <td>f18d9837eb8d2c6f5ca823d721212b85</td>
-    <td>CVE-2023-27159</td>
-    <td>2023-03-31 19:15:00</td>
-    <td>Appwrite up to v1.2.1 was discovered to contain a Server-Side Request Forgery (SSRF) via the component /v1/avatars/favicon. This vulnerability allows attackers to access network resources and sensitive information via a crafted GET request.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-27159">详情</a></td>
-</tr>
-
-<tr>
-    <td>9f62cbb9d05425f7539e271c11b70e95</td>
-    <td>CVE-2023-26925</td>
-    <td>2023-03-31 19:15:00</td>
-    <td>An information disclosure vulnerability exists in the Syslog functionality of D-LINK DIR-882 1.30. A specially crafted network request can lead to the disclosure of sensitive information.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-26925">详情</a></td>
-</tr>
-
-<tr>
-    <td>82bf1b3cd065b38fb430d03215c83a5e</td>
-    <td>CVE-2023-23594</td>
-    <td>2023-03-31 19:15:00</td>
-    <td>An authentication bypass vulnerability in the web client interface for the CL4NX printer before firmware version 1.13.3-u724_r2 provides remote unauthenticated attackers with access to execute commands intended only for valid/authenticated users, such as file uploads and configuration changes.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-23594">详情</a></td>
-</tr>
-
-<tr>
-    <td>11d9a2f53bdafe348c61963a52f41e0a</td>
-    <td>CVE-2023-28843</td>
-    <td>2023-03-31 18:15:00</td>
-    <td>PrestaShop/paypal is an open source module for the PrestaShop web commerce ecosystem which provides paypal payment support. A SQL injection vulnerability found in the PrestaShop paypal module from release from 3.12.0 to and including 3.16.3 allow a remote attacker to gain privileges, modify data, and potentially affect system availability. The cause of this issue is that SQL queries were being constructed with user input which had not been properly filtered. Only deployments on PrestaShop 1.6 are affected. Users are advised to upgrade to module version 3.16.4. There are no known workarounds for this vulnerability.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28843">详情</a></td>
-</tr>
-
-<tr>
-    <td>b8a8bdc454260e90858a63c6a65f9c83</td>
-    <td>CVE-2023-28879</td>
-    <td>2023-03-31 17:15:00</td>
-    <td>In Artifex Ghostscript through 10.01.0, there is a buffer overflow leading to potential corruption of data internal to the PostScript interpreter, in base/sbcp.c. This affects BCPEncode, BCPDecode, TBCPEncode, and TBCPDecode. If the write buffer is filled to one byte less than full, and one then tries to write an escaped character, two bytes are written.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28879">详情</a></td>
 </tr>
 
         </tbody>
