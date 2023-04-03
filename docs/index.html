@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-04-03 17:15:59 -->
+<!-- RELEASE TIME : 2023-04-03 19:13:55 -->
 <html lang="zh-cn">
 
 <head>
@@ -220,6 +220,62 @@
             <th width="5%">URL</th>
         </tr>
         <tr>
+    <td>ccf5410c22b81fcc6510d39d1a276a7f</td>
+    <td>CVE-2023-28837</td>
+    <td>2023-04-03 17:15:00</td>
+    <td>Wagtail is an open source content management system built on Django. Prior to versions 4.1.4 and 4.2.2, a memory exhaustion bug exists in Wagtail's handling of uploaded images and documents. For both images and documents, files are loaded into memory during upload for additional processing. A user with access to upload images or documents through the Wagtail admin interface could upload a file so large that it results in a crash of denial of service. The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin. It can only be exploited by admin users with permission to upload images or documents. Image uploads are restricted to 10MB by default, however this validation only happens on the frontend and on the backend after the vulnerable code. Patched versions have been released as Wagtail 4.1.4 and Wagtail 4.2.2). Site owners who are unable to upgrade to the new versions are encouraged to add extra protections outside of Wagtail to limit the size of uploaded files.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-28837">详情</a></td>
+</tr>
+
+<tr>
+    <td>c0e87f691724a5ca4e811b4df4cf3fbb</td>
+    <td>CVE-2023-28836</td>
+    <td>2023-04-03 17:15:00</td>
+    <td>Wagtail is an open source content management system built on Django. Starting in version 1.5 and prior to versions 4.1.4 and 4.2.2, a stored cross-site scripting (XSS) vulnerability exists on ModelAdmin views within the Wagtail admin interface. A user with a limited-permission editor account for the Wagtail admin could potentially craft pages and documents that, when viewed by a user with higher privileges, could perform actions with that user's credentials. The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin, and only affects sites with ModelAdmin enabled. For page, the vulnerability is in the "Choose a parent page" ModelAdmin view (`ChooseParentView`), available when managing pages via ModelAdmin. For documents, the vulnerability is in the ModelAdmin Inspect view (`InspectView`) when displaying document fields. Patched versions have been released as Wagtail 4.1.4 and Wagtail 4.2.2. Site owners who are unable to upgrade to the new versions can disable or override the corresponding functionality.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-28836">详情</a></td>
+</tr>
+
+<tr>
+    <td>2b695378b4e182a70f11d4abc070f800</td>
+    <td>CVE-2023-28834</td>
+    <td>2023-04-03 17:15:00</td>
+    <td>Nextcloud Server is an open source personal cloud server. Nextcloud Server 24.0.0 until 24.0.6 and 25.0.0 until 25.0.4, as well as Nextcloud Enterprise Server 23.0.0 until 23.0.11, 24.0.0 until 24.0.6, and 25.0.0 until 25.0.4, have an information disclosure vulnerability. A user was able to get the full data directory path of the Nextcloud server from an API endpoint. By itself this information is not problematic as it can also be guessed for most common setups, but it could speed up other unknown attacks in the future if the information is known. Nextcloud Server 24.0.6 and 25.0.4 and Nextcloud Enterprise Server 23.0.11, 24.0.6, and 25.0.4 contain patches for this issue. There are no known workarounds.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-28834">详情</a></td>
+</tr>
+
+<tr>
+    <td>da21d17e3b0fd08711faf4ff59b66b7a</td>
+    <td>CVE-2023-0977</td>
+    <td>2023-04-03 16:15:00</td>
+    <td>A heap-based overflow vulnerability in Trellix Agent (Windows and Linux) version 5.7.8 and earlier, allows a remote user to alter the page heap in the macmnsvc process memory block resulting in the service becoming unavailable.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-0977">详情</a></td>
+</tr>
+
+<tr>
+    <td>4bc83733590c9f05ffc2fae8fac21038</td>
+    <td>CVE-2023-0975</td>
+    <td>2023-04-03 16:15:00</td>
+    <td>A vulnerability exists in Trellix Agent for Windows version 5.7.8 and earlier, that allows local users, during install/upgrade workflow, to replace one of the Agent’s executables before it can be executed. This allows the user to elevate their permissions.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-0975">详情</a></td>
+</tr>
+
+<tr>
+    <td>965f4203e3718b2cf1b9152ac838874e</td>
+    <td>CVE-2022-38072</td>
+    <td>2023-04-03 16:15:00</td>
+    <td>An improper array index validation vulnerability exists in the stl_fix_normal_directions functionality of ADMesh Master Commit 767a105 and v0.98.4. A specially-crafted stl file can lead to a heap buffer overflow. An attacker can provide a malicious file to trigger this vulnerability.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2022-38072">详情</a></td>
+</tr>
+
+<tr>
+    <td>a5b7507207057861cac4bed5668138f5</td>
+    <td>CVE-2022-36440</td>
+    <td>2023-04-03 16:15:00</td>
+    <td>A reachable assertion was found in Frrouting frr-bgpd 8.3.0 in the peek_for_as4_capability function. Attackers can maliciously construct BGP open packets and send them to BGP peers running frr-bgpd, resulting in DoS.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2022-36440">详情</a></td>
+</tr>
+
+<tr>
     <td>d25e9ecd46c5f0a26abd868bd0bda0af</td>
     <td>CVE-2023-1377</td>
     <td>2023-04-03 15:15:00</td>
@@ -241,62 +297,6 @@
     <td>2023-04-03 15:15:00</td>
     <td>The Shopping Cart & eCommerce Store WordPress plugin before 5.4.3 does not validate HTTP requests, allowing authenticated users with admin privileges to perform LFI attacks.</td>
     <td><a href="https://www.tenable.com/cve/CVE-2023-1124">详情</a></td>
-</tr>
-
-<tr>
-    <td>96679006426fe29da2269de1c7bf967b</td>
-    <td>CVE-2023-0820</td>
-    <td>2023-04-03 15:15:00</td>
-    <td>The User Role by BestWebSoft WordPress plugin before 1.6.7 does not protect against CSRF in requests to update role capabilities, leading to arbitrary privilege escalation of any role.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-0820">详情</a></td>
-</tr>
-
-<tr>
-    <td>ed2b625a82c3e8d3d3fb18f4a61a55b1</td>
-    <td>CVE-2023-0399</td>
-    <td>2023-04-03 15:15:00</td>
-    <td>The Image Over Image For WPBakery Page Builder WordPress plugin before 3.0 does not validate and escape some of its shortcode attributes before outputting them back in a page/post where the shortcode is embed, which could allow users with the contributor role and above to perform Stored Cross-Site Scripting attacks.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-0399">详情</a></td>
-</tr>
-
-<tr>
-    <td>4cc09a4c340bde0d2b2d5c78e34c36f2</td>
-    <td>CVE-2022-38923</td>
-    <td>2023-04-03 15:15:00</td>
-    <td>BluePage CMS thru v3.9 processes an insufficiently sanitized HTTP Header allowing MySQL Injection in the 'User-Agent' field using a Time-based blind SLEEP payload.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2022-38923">详情</a></td>
-</tr>
-
-<tr>
-    <td>35ef116c4b3a2464728486e31ed1e121</td>
-    <td>CVE-2022-38922</td>
-    <td>2023-04-03 15:15:00</td>
-    <td>BluePage CMS thru 3.9 processes an insufficiently sanitized HTTP Header Cookie value allowing MySQL Injection in the 'users-cookie-settings' token using a Time-based blind SLEEP payload.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2022-38922">详情</a></td>
-</tr>
-
-<tr>
-    <td>eb3fe438f446c1289b06ccdbfb534291</td>
-    <td>CVE-2023-28625</td>
-    <td>2023-04-03 14:15:00</td>
-    <td>mod_auth_openidc is an authentication and authorization module for the Apache 2.x HTTP server that implements the OpenID Connect Relying Party functionality. In versions 2.0.0 through 2.4.13.1, when `OIDCStripCookies` is set and a crafted cookie supplied, a NULL pointer dereference would occur, resulting in a segmentation fault. This could be used in a Denial-of-Service attack and thus presents an availability risk. Version 2.4.13.2 contains a patch for this issue. As a workaround, avoid using `OIDCStripCookies`.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-28625">详情</a></td>
-</tr>
-
-<tr>
-    <td>b1a8c91ee557a71c12ad76d995bc6d92</td>
-    <td>CVE-2023-1766</td>
-    <td>2023-04-03 14:15:00</td>
-    <td>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Akbim Computer Panon allows Reflected XSS.This issue affects Panon: before 1.0.2.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1766">详情</a></td>
-</tr>
-
-<tr>
-    <td>e122dcb34ce9ec19cb08e9a831d42f46</td>
-    <td>CVE-2023-1765</td>
-    <td>2023-04-03 14:15:00</td>
-    <td>Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Akbim Computer Panon allows SQL Injection.This issue affects Panon: before 1.0.2.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1765">详情</a></td>
 </tr>
 
         </tbody>
