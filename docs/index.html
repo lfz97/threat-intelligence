@@ -1,4 +1,4 @@
-<!-- RELEASE TIME : 2023-04-04 21:15:14 -->
+<!-- RELEASE TIME : 2023-04-04 23:17:24 -->
 <html lang="zh-cn">
 
 <head>
@@ -220,6 +220,30 @@
             <th width="5%">URL</th>
         </tr>
         <tr>
+    <td>151f6b3784f674c6718ed3605f949cfa</td>
+    <td>CVE-2023-27496</td>
+    <td>2023-04-04 20:15:00</td>
+    <td>Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9, the OAuth filter assumes that a `state` query param is present on any response that looks like an OAuth redirect response. Sending it a request with the URI path equivalent to the redirect path, without the `state` parameter, will lead to abnormal termination of Envoy process. Versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9 contain a patch. The issue can also be mitigated by locking down OAuth traffic, disabling the filter, or by filtering traffic before it reaches the OAuth filter (e.g. via a lua script).</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-27496">详情</a></td>
+</tr>
+
+<tr>
+    <td>9845b12d20647ac21e639ec2b1e907ee</td>
+    <td>CVE-2023-27493</td>
+    <td>2023-04-04 20:15:00</td>
+    <td>Envoy is an open source edge and service proxy designed for cloud-native applications. Prior to versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9, Envoy does not sanitize or escape request properties when generating request headers. This can lead to characters that are illegal in header values to be sent to the upstream service. In the worst case, it can cause upstream service to interpret the original request as two pipelined requests, possibly bypassing the intent of Envoy’s security policy. Versions 1.26.0, 1.25.3, 1.24.4, 1.23.6, and 1.22.9 contain a patch. As a workaround, disable adding request headers based on the downstream request properties, such as downstream certificate properties.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-27493">详情</a></td>
+</tr>
+
+<tr>
+    <td>ab35ebe72fd245ed8bd7770e868e7dd5</td>
+    <td>CVE-2023-1840</td>
+    <td>2023-04-04 20:15:00</td>
+    <td>The Sp*tify Play Button for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in versions up to, and including, 2.07 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.</td>
+    <td><a href="https://www.tenable.com/cve/CVE-2023-1840">详情</a></td>
+</tr>
+
+<tr>
     <td>4ba0ef9a8189ddb7faae411acd808f29</td>
     <td>CVE-2023-27492</td>
     <td>2023-04-04 19:15:00</td>
@@ -273,30 +297,6 @@
     <td>2023-04-04 17:15:00</td>
     <td>The listed versions of Nexx Smart Home devices use a WebSocket server that does not validate if the bearer token in the Authorization header belongs to the device attempting to associate. This could allow any authorized user to receive alarm information and signals meant for other devices which leak a deviceId.</td>
     <td><a href="https://www.tenable.com/cve/CVE-2023-1751">详情</a></td>
-</tr>
-
-<tr>
-    <td>a0367a401da553c157c0f3789c89ab12</td>
-    <td>CVE-2023-1750</td>
-    <td>2023-04-04 17:15:00</td>
-    <td>The listed versions of Nexx Smart Home devices lack proper access control when executing actions. An attacker with a valid NexxHome deviceId could retrieve device history, set device settings, and retrieve device information.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1750">详情</a></td>
-</tr>
-
-<tr>
-    <td>c55fd34329f9c01729c64f61a4a08db0</td>
-    <td>CVE-2023-1749</td>
-    <td>2023-04-04 17:15:00</td>
-    <td>The listed versions of Nexx Smart Home devices lack proper access control when executing actions. An attacker with a valid NexxHome deviceId could send API requests that the affected devices would execute.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1749">详情</a></td>
-</tr>
-
-<tr>
-    <td>c0ece8ecd399535a7f1d02a05c7f8e55</td>
-    <td>CVE-2023-1748</td>
-    <td>2023-04-04 17:15:00</td>
-    <td>The listed versions of Nexx Smart Home devices use hard-coded credentials. An attacker with unauthenticated access to the Nexx Home mobile application or the affected firmware could view the credentials and access the MQ Telemetry Server (MQTT) server and the ability to remotely control garage doors or smart plugs for any customer.</td>
-    <td><a href="https://www.tenable.com/cve/CVE-2023-1748">详情</a></td>
 </tr>
 
         </tbody>
