@@ -2,13 +2,13 @@ import hashlib
 
 
 class CVEInfo:
-    id = ""
-    src = ""
-    url = ""
-    time = ""
-    title = ""
-    info = ""
-    md5 = ""
+    id: str = ""
+    src: str = ""
+    url: str = ""
+    time: str = ""
+    title: str = ""
+    info: str = ""
+    md5: str = ""
 
     def is_vaild(self):
         return not not self.title

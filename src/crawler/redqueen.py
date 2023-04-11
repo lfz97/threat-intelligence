@@ -35,6 +35,43 @@ class RedQueen(BaseCrawler):
             log.warn(
                 "获取 [%s] 威胁情报失败： [HTTP Error %i]" % (self.name_ch, response.status_code)
             )
+        response = httpx.get(
+            "https://redqueen.tj-un.com/Json/intelHomeKeyList.json",
+            headers=self.headers,
+            timeout=self.timeout,
+        )
+        if response.status_code == 200:
+            for obj in response.json().get("intel_list", []):
+                cve = CVEInfo()
+                cve.src = self.name_ch
+                cve.url = self.url_cve + obj["id"]
+                cve.time = obj["pub_time"]
+                cve.title = obj["title"]
+                cve.id = obj["id"]
+                cve.info = obj["source"]
+                cves.append(cve)
+        else:
+            log.warn(
+                "获取 [%s] 威胁情报失败： [HTTP Error %i]" % (self.name_ch, response.status_code)
+            )
+        response = httpx.get(
+            "https://redqueen.tj-un.com/Json/intelHomeNewInfo.json",
+            headers=self.headers,
+            timeout=self.timeout,
+        )
+        if response.status_code == 200:
+            for obj in response.json().get("new_info", []):
+                cve = CVEInfo()
+                cve.src = self.name_ch
+                cve.url = "https://redqueen.tj-un.com/InfoDetails.html?id=" + obj["id"]
+                cve.time = obj["pub_time"]
+                cve.title = obj["title"]
+                cve.id = obj["id"]
+                cves.append(cve)
+        else:
+            log.warn(
+                "获取 [%s] 威胁情报失败： [HTTP Error %i]" % (self.name_ch, response.status_code)
+            )
         return cves
 
     def to_cve(self, json_obj):
