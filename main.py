@@ -53,7 +53,6 @@ def main(
         srcs = [
             Cert360(),
             QiAnXin(),
-            RedQueen(),
             AVDCrawler(),
             Vas(),
             OSCS(),
